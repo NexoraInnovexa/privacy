@@ -1,0 +1,16 @@
+# Python virtual environment
+backend/venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Hugging Face cache
+.cache/huggingface/
+
+# Node / frontend build artifacts (if any)
+frontend/node_modules/
+electron-app/node_modules/
+node_modules/
+electron-app/node_modules/
+.env
