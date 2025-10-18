@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const BACKEND_BASE_URL = "https://privacy-6tkceq0l4-nexorainnovexas-projects.vercel.app/"; // ← replace this with your actual Vercel URL
+const BACKEND_BASE_URL = "https://ilawdun.us/"; // ← replace this with your actual Vercel URL
 
 function App() {
   const [osApps, setOsApps] = useState([]);
