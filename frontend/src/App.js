@@ -15,6 +15,18 @@ function App() {
     console.log("🔍 App mounted. Starting system checks...");
 
     // --- Electron detection
+
+
+    if (!window.electronAPI) {
+     console.log("🌐 Checking browser permission states...");
+     navigator.permissions.query({ name: "camera" }).then((res) =>
+       console.log("Camera permission:", res.state)
+     );
+     navigator.permissions.query({ name: "geolocation" }).then((res) =>
+       console.log("Location permission:", res.state)
+     );
+   }
+
     if (window.electronAPI && typeof window.electronAPI.scanOS === "function") {
       console.log("🖥️ Running in Electron — scanning OS...");
       window.electronAPI
@@ -30,6 +42,7 @@ function App() {
     } else {
       console.log("🌐 Running in Web — skipping OS scan.");
     }
+
 
     // --- Browser extension scan
     if (window.electronAPI && typeof window.electronAPI.scanBrowserExtensions === "function") {
