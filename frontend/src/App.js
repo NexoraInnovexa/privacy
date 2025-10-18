@@ -45,9 +45,9 @@ function App() {
     }
 
     // --- Backend connectivity test
-    console.log("🌐 Attempting to contact backend at http://localhost:8000/audit ...");
+    console.log("🌐 Attempting to contact backend at https://ilawdun.us/audit ...");
     axios
-      .get("http://localhost:8000/audit", {
+      .get("https://ilawdun.us/audit", {
         timeout: 5000, // 5s timeout
       })
       .then((res) => {
@@ -77,7 +77,7 @@ function App() {
   const analyzeRisks = async () => {
     console.log("🤖 Sending data for AI risk analysis...");
     try {
-      const res = await axios.post("http://localhost:8000/analyze", {
+      const res = await axios.post("https://ilawdun.us/analyze", {
         os_apps: osApps,
         browser_extensions: browserExtensions,
         account_apps: auditResults?.connected_apps || [],
