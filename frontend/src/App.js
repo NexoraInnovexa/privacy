@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const BACKEND_BASE_URL = "https://ilawdun.us/"; // ← replace this with your actual Vercel URL
+const BACKEND_BASE_URL = "https://ilawdun.us"; // fixed
 
 function App() {
   const [osApps, setOsApps] = useState([]);
@@ -9,6 +9,7 @@ function App() {
   const [auditResults, setAuditResults] = useState(null);
   const [error, setError] = useState(null);
   const [loadingAI, setLoadingAI] = useState(false);
+
 
   useEffect(() => {
     console.log("🔍 App mounted. Starting system checks...");
